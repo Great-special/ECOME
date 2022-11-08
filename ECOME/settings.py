@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,9 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i)v+**%!2@7yh1&&pn57ptv17ix7+bt&d1cqrkwyx_vm%-hlwa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Setting up for payment support using stripe The Publishable key is used on the frontend while the Secret key is used in the backend
 STRIPE_SECRET_KEY = 'sk_test_51LzQwaCJA0lCvXM0KTpA7v4kax7O0QXZ9NtD7PaKdFRuXpxGuXuJpG6ZsGLdZYXhuMqKIAdabge8zlBiuUvYUHGY00syL32Zna'
