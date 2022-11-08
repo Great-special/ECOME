@@ -19,15 +19,12 @@ djangorestframework==3.14.0
 djangorestframework-simplejwt==4.8.0
 djoser==2.1.0
 future==0.18.2
+gunicorn==20.1.0
 idna==3.4
 itypes==1.2.0
 Jinja2==3.1.2
 MarkupSafe==2.1.1
-MetaTrader5==5.0.36
-mpl-finance==0.10.1
 oauthlib==3.2.1
-openpyxl==3.0.9
-pandas-ta==0.3.14b0
 Pillow==9.2.0
 psycopg2==2.9.3
 pycparser==2.21
@@ -41,7 +38,6 @@ social-auth-app-django==4.0.0
 social-auth-core==4.3.0
 sqlparse==0.4.3
 stripe==4.2.0
-TA-Lib @ file:///C:/Users/GREAT%20SPEED/Desktop/PROJECTS/Part%202/trade%20crypto/TA_Lib-0.4.24-cp39-cp39-win_amd64.whl
 types-cryptography==3.3.23
 tzdata==2022.4
 uritemplate==4.1.1
